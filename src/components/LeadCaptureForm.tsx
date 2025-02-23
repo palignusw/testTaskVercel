@@ -1,8 +1,7 @@
 import { useEffect } from 'react'
-import { Form, Input, Button, InputNumber, Switch, message, Card } from 'antd'
+import { Form, Input, Button, InputNumber, Switch, Card } from 'antd'
 import {
 	UserOutlined,
-	FileTextOutlined,
 	TagOutlined,
 	DollarOutlined,
 	CalendarOutlined,
@@ -125,6 +124,11 @@ export default function LeadCaptureForm() {
 							prefix={<LockOutlined />}
 							onChange={e => localStorage.setItem('api_token', e.target.value)}
 							placeholder='Введите ваш API токен'
+							addonAfter={
+								<span className='text-gray-500 text-xs'>
+									Пример: 317ad1fc-e0a9-11ef-a978-0242ac120007
+								</span>
+							}
 							className='border-blue-500'
 						/>
 					</Form.Item>
